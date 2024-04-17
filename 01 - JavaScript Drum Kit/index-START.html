@@ -33,7 +33,7 @@
     <div data-key="72" class="key">
       <kbd>H</kbd>
       <span class="sound">ride</span>
-    </div>
+    </div> 
     <div data-key="74" class="key">
       <kbd>J</kbd>
       <span class="sound">snare</span>
@@ -59,6 +59,16 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
 <script>
+  const keys = document.querySelectorAll('.key')
+  const keysTest = document.getElementsByClassName('key') // esse não funciona, pq ele retorna uma coleção
+  const sounds = document.querySelectorAll('.sound')
+  console.log('sounds :>> ', sounds);
+  
+  keys.forEach(key => {
+    key.addEventListener('click', () => {
+      console.log(key)
+    })
+  });
 
 </script>
 
